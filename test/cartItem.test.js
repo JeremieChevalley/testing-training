@@ -1,17 +1,9 @@
-/**
- * @file      cart.test.js
- * @brief     This class is designed to test the behaviour of a cartItem.
- * @author    Created by Nicolas.GLASSEY
- * @version   13-02-2022 - original (dedicated to RIA1)
- * @version   08-03-2022 - update
- */
-
 "use strict";
 
-let CartItem =  require('../CartItem/CartItem.js');
-const InvalidArticleIdException = require("../CartItem/InvalidArticleIdException.js");
-const InvalidQuantityException = require("../CartItem/InvalidQuantityException.js");
-const InvalidPriceException = require("../CartItem/InvalidPriceException.js");
+let CartItem =  require('../src/CartItem/CartItem.js');
+const InvalidArticleIdException = require("../src/CartItem/InvalidArticleIdException.js");
+const InvalidQuantityException = require("../src/CartItem/InvalidQuantityException.js");
+const InvalidPriceException = require("../src/CartItem/InvalidPriceException.js");
 
 test('allGetters_NominalCase_Success', () => {
     //given
@@ -27,7 +19,7 @@ test('allGetters_NominalCase_Success', () => {
 
     //then
     expect(articleId).toEqual(cartItem.articleId);
-    expect(articleId).toEqual(cartItem.articleId);
+    expect(name).toEqual(cartitem.name);
     expect(quantity).toEqual(cartItem.quantity);
     expect(price).toEqual(cartItem.price);
     expect(total).toEqual(cartItem.total);
